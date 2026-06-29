@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="post-layout">
+  <aside class="sidebar">
+    {% include sidebar.html %}
+  </aside>
+  <article class="post-content">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">{{ page.date | date: "%B %d, %Y" }}</p>
+    {{ content }}
+  </article>
+</div>
