@@ -81,16 +81,22 @@ p {
 
 .header-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 20px;
 }
 
-.avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
+.avatar-wrapper {
+  width: 100px;
   flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 hr {
@@ -158,6 +164,89 @@ footer {
 .post-content h1 {
   font-size: 2rem;
   margin-bottom: 4px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.post-card {
+  display: block;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s;
+}
+
+.post-card:hover {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.post-card-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.post-card-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.post-card-image > * {
+  position: relative;
+  z-index: 1;
+}
+
+.post-card-image h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.post-card-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  align-self: flex-start;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.post-card-excerpt {
+  padding: 16px;
+  background: #f9f9f9;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {

@@ -4,7 +4,9 @@ layout: default
 
 <header>
   <div class="header-inner">
-    <img src="/images/chopper.png" alt="" class="avatar">
+    <div class="avatar-wrapper">
+      <img src="/images/chopper.png" alt="">
+    </div>
     <div>
       <h1>FatFryer</h1>
       <p class="subtitle">Machine Learning Engineer</p>
@@ -40,12 +42,16 @@ layout: default
 <p class="separator">* * *</p>
 
 <section id="posts">
-  <h2>Posts</h2>
+  <h2>Mr. FatFryer's Wonder Emporium</h2>
+  <div class="post-grid">
   {% for post in site.posts %}
-  <div class="entry">
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="meta">{{ post.date | date: "%B %d, %Y" }}</p>
-    {{ post.excerpt }}
-  </div>
+    <a href="{{ post.url }}" class="post-card">
+      <div class="post-card-image" style="background-image: url('{{ post.image | default: "https://placehold.co/600x400/e2e8f0/64748b?text=Post" }}')">
+        <span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <h3>{{ post.title }}</h3>
+      </div>
+      <div class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+    </a>
   {% endfor %}
+  </div>
 </section>
