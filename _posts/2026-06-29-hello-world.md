@@ -1,11 +1,11 @@
 ---
 title: "Hello World"
 image: https://picsum.photos/600/400
-excerpt: "A short description that shows up on the post card preview."
+excerpt: "testing, testing, I'm just suggesting..."
 ---
 
 This is my first post. I'm a Machine Learning Engineer.
 
-Here's some more content. You can write in **markdown** with _formatting_.
-
 ![External test image](https://picsum.photos/600/400)
+
+<p class="caption">refresh for a new image</p>

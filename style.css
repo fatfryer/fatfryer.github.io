@@ -173,6 +173,14 @@ footer {
   border-radius: 8px;
 }
 
+.post-content .caption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: -4px;
+  margin-bottom: 16px;
+}
+
 .post-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
