@@ -86,8 +86,8 @@ p {
 }
 
 .avatar-wrapper {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
