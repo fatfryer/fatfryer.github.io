@@ -33,7 +33,7 @@ h1 {
 h2 {
   font-size: 1.6rem;
   font-weight: 600;
-  margin: 40px 0 16px;
+  margin: 32px 0 12px;
   color: #555;
 }
 
@@ -79,11 +79,31 @@ p {
   margin-bottom: 6px;
 }
 
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 hr {
   border: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #ddd, transparent);
-  margin: 48px 0;
+  border-top: 1px solid #eee;
+  margin: 24px 0;
+}
+
+.separator {
+  text-align: center;
+  color: #ccc;
+  letter-spacing: 0.15em;
+  margin: 24px 0;
 }
 
 footer {
